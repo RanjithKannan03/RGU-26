@@ -9,7 +9,7 @@
 
 ### 1. Backend Setup (Python + uv)
 
-Ensure you have [uv](https://github.com/astral-sh/uv) installed.
+Ensure you have [uv](https://github.com/astral-sh/uv) and [bun](https://bun.com/docs) installed.
 
 ```bash
 # Navigate to backend
