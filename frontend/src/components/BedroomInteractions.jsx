@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Book from "./Book";
 import { motion, AnimatePresence } from "motion/react";
-import Image from "next/image";
+import { redirect } from "next/navigation";
 import Safe from "./Safe";
 
 function BedroomInteractions() {
@@ -34,6 +34,14 @@ function BedroomInteractions() {
       <AnimatePresence>
         {openSafe && <Safe setOpenSafe={setOpenSafe} />}
       </AnimatePresence>
+      <button
+        onClick={() => {
+          redirect("/");
+        }}
+        className="bottom-[20%] left-[5%] text-white absolute cursor-pointer hover:font-bold text-2xl"
+      >
+        Go Back
+      </button>
     </div>
   );
 }
