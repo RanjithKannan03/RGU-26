@@ -5,4 +5,5 @@ description = "Add your description here"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard]>=0.129.0",
+    "openai-agents>=0.10.2",
 ]
