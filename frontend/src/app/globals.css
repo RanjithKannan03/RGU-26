@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+/* 整个页面锁死 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 居中容器 */
+.scene-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+/* 画布 */
+.scene {
+  position: relative;
+  height: 100vh;
+  aspect-ratio: 16 / 9;
+  max-width: 100vw;
+}
+
+/* 背景图 */
+.scene-img {
+  object-fit: contain;
+}
+
+/* 热点 */
+.hotspot {
+  position: absolute;
+  width: 6%;
+  height: 10%;
+  background: rgba(255, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.hotspot:hover {
+  background: rgba(255, 0, 0, 0.6);
+}

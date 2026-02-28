@@ -11,7 +11,7 @@ const StateInitialiser = ({ children }) => {
     }
 
     if (localStorage.getItem("isFuse") === null) {
-      localStorage.setItem("isFuse", "false");
+      localStorage.setItem("isFuse", "true");
     }
 
     if (localStorage.getItem("completedPuzzle2") === null) {
@@ -20,6 +20,9 @@ const StateInitialiser = ({ children }) => {
 
     if (localStorage.getItem("lightsOn") === null) {
       localStorage.setItem("lightsOn", "true");
+    }
+    if (localStorage.getItem("completedPuzzle2") === null) {
+      localStorage.setItem("completedPuzzle2", "false");
     }
   }, []);
   return <div>{children}</div>;

@@ -3,32 +3,31 @@
 import { AnimatePresence } from "motion/react";
 import React from "react";
 import { useState } from "react";
-import Tub from "./Tub";
-import Toilet from "./Toilet";
-import Mirror from "./Mirror";
 import { redirect } from "next/navigation";
+import Pic from "./Pic";
+import Fuse from "./Fuse";
 
-const BathroomInteractions = () => {
-  const [openTub, setOpenTub] = useState(false);
-  const [openToilet, setOpenToilet] = useState(false);
-  const [openMirror, setOpenMirror] = useState(false);
+const CommonRoomInteractions = () => {
+  const [openPic, setOpenPic] = useState(false);
+  const [openFuse, setOpenFuse] = useState(false);
+
   return (
     <div className="w-full h-full bg-[#00000053] relative flex items-center justify-center">
-      {/* <button
-        onClick={() => {
-          setOpenBook(true);
-        }}
-        className="w-40 rotate-[20deg] z-30 aspect-video absolute bottom-[30%] left-[33%] cursor-pointer"
-      /> */}
-
       <button
         onClick={() => {
-          setOpenTub(true);
+          setOpenPic(true);
         }}
-        className="w-[20%] aspect-[16/6] z-30 absolute bottom-[20%] left-[25%] cursor-pointer"
+        className="w-20 aspect-square z-30 absolute bottom-[45%] right-[20%] cursor-pointer"
       />
 
       <button
+        onClick={() => {
+          setOpenFuse(true);
+        }}
+        className="w-32 aspect-square z-30 absolute bottom-[55%] left-[12%] cursor-pointer"
+      />
+
+      {/* <button
         onClick={() => {
           setOpenToilet(true);
         }}
@@ -40,12 +39,17 @@ const BathroomInteractions = () => {
           setOpenMirror(true);
         }}
         className="w-60 aspect-square  z-30 absolute bottom-[45%] right-[20%] cursor-pointer"
-      />
+      /> */}
 
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {openTub && <Tub setOpenTub={setOpenTub} />}
         {openToilet && <Toilet setOpenToilet={setOpenToilet} />}
         {openMirror && <Mirror setOpenMirror={setOpenMirror} />}
+      </AnimatePresence> */}
+
+      <AnimatePresence>
+        {openPic && <Pic setOpenPic={setOpenPic} />}
+        {openFuse && <Fuse setOpenFuse={setOpenFuse} />}
       </AnimatePresence>
 
       <button
@@ -60,4 +64,4 @@ const BathroomInteractions = () => {
   );
 };
 
-export default BathroomInteractions;
+export default CommonRoomInteractions;

@@ -16,7 +16,7 @@ function BedroomInteractions() {
         onClick={() => {
           setOpenBook(true);
         }}
-        className="w-40 rotate-[20deg] z-30 aspect-video absolute bottom-[30%] left-[33%] cursor-pointer"
+        className="w-40 rotate-[20deg] z-30  aspect-video absolute bottom-[30%] left-[33%] cursor-pointer"
       />
 
       <button
