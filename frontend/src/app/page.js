@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Agent from "@/components/Agent";
 
 export default function Home() {
   const router = useRouter();
@@ -30,7 +31,7 @@ export default function Home() {
           <button
             key={door.id}
             onClick={() => router.push(door.route)}
-            className="hotspot aspect-[8/16]"
+            className="z-9 hotspot aspect-[8/16]"
             style={{
               left: `${door.left * 100}%`,
               top: `${door.top * 100}%`,
@@ -38,6 +39,8 @@ export default function Home() {
             }}
           />
         ))}
+
+        <Agent />
       </div>
     </div>
   );

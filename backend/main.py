@@ -10,7 +10,8 @@ app = FastAPI()
 # gemini_client = AsyncOpenAI(base_url=GEMINI_BASE_URL, api_key=GEMINI_API_KEY)
 # gemini_model = OpenAIChatCompletionsModel(model="gemini-2.0-flash", openai_client=gemini_client)
 client=AsyncOpenAI(api_key=OPENAI_API_KEY)
-model=OpenAIChatCompletionsModel(openai_client=client,model="gpt-4.1")
+model=OpenAIChatCompletionsModel(openai_client=client,model="gpt-4.1-nano")
+
 
 instructions="""
     "You are a dark, malevolent mirror that watches the player. "
@@ -43,6 +44,7 @@ def home():
 
 @app.post("/api/chat")
 async def chat(data: ChatInput):
+    print(data)
     response= await chat_llm(data)
     return JSONResponse(
         status_code=status.HTTP_200_OK,
