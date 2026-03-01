@@ -22,7 +22,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="scene-img z-30"
+          className="scene-img"
         />
 
         {/* 热点按钮 */}
