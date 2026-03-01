@@ -7,4 +7,3 @@ class MessageResponse(BaseModel):
 
 class ChatInput(BaseModel):
     message: str
-    puzzle_stage:str

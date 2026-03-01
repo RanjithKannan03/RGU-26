@@ -1,6 +1,6 @@
 "use server";
 
-backendURL = process.env.BACKEND_URL;
+const backendURL = process.env.BACKEND_URL;
 
 export async function chat(message, puzzleStage) {
   try {
@@ -11,7 +11,6 @@ export async function chat(message, puzzleStage) {
       },
       body: JSON.stringify({
         message: message,
-        puzzle_stage: puzzleStage,
       }),
     });
     const data = await response.json();

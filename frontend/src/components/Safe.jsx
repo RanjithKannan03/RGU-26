@@ -51,25 +51,25 @@ const Safe = ({ setOpenSafe }) => {
               name="num1"
               type="text"
               maxLength={1}
-              className="aspect-square w-20 outline-1 focus:outline-2 text-center text-3xl"
+              className="aspect-square w-20 outline-1 focus:outline-2 text-white outline-white focus:outline-blue-400 text-center text-3xl"
             />
             <input
               name="num2"
               type="text"
               maxLength={1}
-              className="aspect-square w-20 outline-1 focus:outline-2 text-center text-3xl"
+              className="aspect-square w-20 outline-1 focus:outline-2 text-white outline-white focus:outline-blue-400 text-center text-3xl"
             />
             <input
               name="num3"
               type="text"
               maxLength={1}
-              className="aspect-square w-20 outline-1 focus:outline-2 text-center text-3xl"
+              className="aspect-square w-20 outline-1 focus:outline-2 text-white outline-white focus:outline-blue-400 text-center text-3xl"
             />
             <input
               name="num4"
               type="text"
               maxLength={1}
-              className="aspect-square w-20 outline-1 focus:outline-2 text-center text-3xl"
+              className="aspect-square w-20 outline-1 focus:outline-2 text-white outline-white focus:outline-blue-400 text-center text-3xl"
             />
           </div>
 

@@ -3,8 +3,9 @@
 import React from "react";
 import { useEffect } from "react";
 
-const StateInitialiser = () => {
+const StateInitialiser = ({ children }) => {
   useEffect(() => {
+    localStorage.clear();
     if (localStorage.getItem("completedPuzzle1") === null) {
       localStorage.setItem("completedPuzzle1", "false");
     }
@@ -20,8 +21,11 @@ const StateInitialiser = () => {
     if (localStorage.getItem("lightsOn") === null) {
       localStorage.setItem("lightsOn", "false");
     }
+    if (localStorage.getItem("completedPuzzle2") === null) {
+      localStorage.setItem("completedPuzzle2", "false");
+    }
   }, []);
-  return <div>StateInitialiser</div>;
+  return <div>{children}</div>;
 };
 
 export default StateInitialiser;
