@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div className="scene-wrapper">
-      <div className="scene">
+      <div className="scene relative">
         {/* 背景图 */}
         <Image
           src="/assets/home.png"
@@ -22,7 +22,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="scene-img"
+          className="scene-img z-30"
         />
 
         {/* 热点按钮 */}

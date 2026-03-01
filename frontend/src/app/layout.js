@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import StateInitialiser from "@/components/StateInitialiser";
+import TimerComponent from "@/components/TimerComponent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       >
         <div className="w-screen h-screen flex items-center justify-center">
           <StateInitialiser>
+            <TimerComponent />
             {children}
           </StateInitialiser>
         </div>
